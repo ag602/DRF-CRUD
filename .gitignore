@@ -1,0 +1,16 @@
+*.pyc
+__pycache__/
+
+db.sqlite3
+public/
+env/
+
+.git/
+
+**/migrations/**
+!**/migrations
+!**/migrations/__init__.py
+
+# pycharm
+.idea/
+virenv/
