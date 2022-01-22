@@ -3,8 +3,6 @@ from .models import User, Task
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth import authenticate
 
-from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
-
 
 class RegistrationSerializer(serializers.ModelSerializer):
     password2 = serializers.CharField(style={"input_type": "password"}, write_only=True)
@@ -29,15 +27,15 @@ class RegistrationSerializer(serializers.ModelSerializer):
         return user
 
 
-class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
-    @classmethod
-    def get_token(cls, user):
-        token = super(MyTokenObtainPairSerializer, cls).get_token(user)
-
-        # Add custom claims
-        token['email'] = user.email
-        print(token)
-        return token
+# class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
+#     @classmethod
+#     def get_token(cls, user):
+#         token = super(MyTokenObtainPairSerializer, cls).get_token(user)
+#
+#         # Add custom claims
+#         token['email'] = user.email
+#         print(token)
+#         return token
 
 
 class LoginSerializers(serializers.ModelSerializer):

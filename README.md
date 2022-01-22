@@ -1,8 +1,9 @@
-# Django REST framework AdvisorBook -[Link](https://advisorbooking.herokuapp.com/)
+# Django REST framework CRUD -[Link](https://drfcrud.herokuapp.com/)
 
 ### Including:
-- Simple JWT (Support for JSON Web Tokens Authentication)
+- Token based auth
 - Custom user model
-- Email instead of username (username does not exist)
+- Generic Views
+- PostgreSQL db
 
-After `python manage.py runserver` go to http://127.0.0.1:8000/ to check available endpoints.
+After `python manage.py runserver` go to http://127.0.0.1:8000/swagger to check available endpoints.

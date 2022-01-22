@@ -6,8 +6,6 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from .serializers import *
 from rest_framework import generics
-from rest_framework_simplejwt.views import TokenObtainPairView
-from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth import authenticate
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.authtoken.models import Token

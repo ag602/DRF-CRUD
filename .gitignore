@@ -7,6 +7,10 @@ env/
 
 .git/
 
+**/migrations/**
+!**/migrations
+!**/migrations/__init__.py
+
 # pycharm
 .idea/
 virenv/
